@@ -3,6 +3,7 @@
 <head>
     <title>ICSearch</title>
     <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    <script src="js/app.js"></script>
 
 </head>
 <body>
@@ -16,14 +17,15 @@
 
     <div class="center">
         <div class="search-container">
-            <select class="dropdown" id="search-type">
-                <option value="professor">Professor</option>
-                <option value="room">Room</option>
-            </select>
-            <input type="text" class="search-bar" placeholder="">
-            <button class="search-button">Search</button>
-        </div>
+            <form id="search-form">
+                <select class="dropdown" id="search-type">
+                    <option value="Professor">Professor</option>
+                    <option value="Room">Room</option>
+                </select>
+                <input type="text" class="search-bar" id="search-bar" placeholder="">
+                <button type="submit" class="search-button">Search</button>
+            </form>
     </div>
-
+    <script src="js/app.js"></script>
 </body>
 </html>
