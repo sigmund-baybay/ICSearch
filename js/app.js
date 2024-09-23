@@ -13,25 +13,28 @@ const searchProf = {
 
 function setSearchType(type) {
     currentSearchType = type;
+
     const searchBar = document.getElementById('search-bar');
-    const roomButton = document.getElementById('room-button');
-    const facultyButton = document.getElementById('faculty-button');
 
     if (type === 'Room') {
         searchBar.placeholder = 'Enter a room...';
-        roomButton.classList.add('active');
-        facultyButton.classList.remove('active');
-    } else {
-        searchBar.placeholder = 'Enter faculty name...';
-        roomButton.classList.remove('active');
-        facultyButton.classList.add('active');
+        searchBar.setAttribute('list', 'room-list'); 
+    } else if (type === 'Faculty') {
+        searchBar.placeholder = 'Enter a professor...';
+        searchBar.setAttribute('list', 'faculty-list'); 
     }
+
+
+    document.getElementById('room-button').classList.toggle('active', type === 'Room');
+    document.getElementById('faculty-button').classList.toggle('active', type === 'Faculty');
 }
+
 
 function handleSearch(event) {
     event.preventDefault(); 
 
     const searchValue = document.getElementById('search-bar').value.trim().toLowerCase();
+    const replaceValue = document.getElementById('search-bar');
 
     if (searchValue === '') {
         alert('Please add an input.');
@@ -41,12 +44,14 @@ function handleSearch(event) {
     if (currentSearchType === 'Room') {
         if (!(searchValue in searchRoom)) { 
             alert('Invalid Room.');
+            searchValue.value = '';
             return;
         }
         window.location.href = searchRoom[searchValue];
     } else if (currentSearchType === 'Faculty') {
         if (!(searchValue in searchProf)) { 
             alert('Invalid Professor.');
+            replaceValue.value = '';
             return;
         }
         window.location.href = searchProf[searchValue];

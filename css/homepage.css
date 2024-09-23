@@ -23,6 +23,7 @@ body::before {
   z-index: -1;
 }
 
+
 /* HEADER */
 
 .logo-img {
@@ -62,6 +63,7 @@ header nav {
   margin-right: 180px;
 }
 
+
 /* MAIN */
 
 .container {
@@ -78,6 +80,7 @@ header nav {
   border-radius: 15px;
   padding: 40px;
   width: 50%;
+  box-sizing: border-box;
 }
 
 .search-button-container {
@@ -142,6 +145,7 @@ header nav {
   cursor: pointer;
   font-size: 18px;  
 }
+
 
 /* FOOTER */
 
