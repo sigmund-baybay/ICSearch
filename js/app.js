@@ -1,5 +1,16 @@
 let currentSearchType = 'Room';
 
+const searchRoom = {
+    "ics mh": "pages/rooms/icsmh.html",
+    "ics pc2": "pages/rooms/icspc2.html",
+    "ics pc9": "pages/rooms/icspc9.html",
+    "ics lh4": "pages/rooms/icslh4.html",
+};
+const searchProf = {
+    "juan miguel j. bawagan": "pages/profs/jjbawagan.html",
+    "perico dan b. dionisio": "pages/profs/pbdionisio.html"
+}
+
 function setSearchType(type) {
     currentSearchType = type;
     const searchBar = document.getElementById('search-bar');
@@ -20,8 +31,7 @@ function setSearchType(type) {
 function handleSearch(event) {
     event.preventDefault(); 
 
-    // Get the search value, trim whitespace, and remove spaces
-    const searchValue = document.getElementById('search-bar').value.trim().replace(/\s+/g, "").toLowerCase();
+    const searchValue = document.getElementById('search-bar').value.trim().toLowerCase();
 
     if (searchValue === '') {
         alert('Please add an input.');
@@ -29,9 +39,17 @@ function handleSearch(event) {
     }
 
     if (currentSearchType === 'Room') {
-        window.location.href = `pages/rooms/${searchValue}.html`;
+        if (!(searchValue in searchRoom)) { 
+            alert('Invalid Room.');
+            return;
+        }
+        window.location.href = searchRoom[searchValue];
     } else if (currentSearchType === 'Faculty') {
-        window.location.href = `pages/profs/${searchValue}.html`;
+        if (!(searchValue in searchProf)) { 
+            alert('Invalid Professor.');
+            return;
+        }
+        window.location.href = searchProf[searchValue];
     }
+    
 }
-

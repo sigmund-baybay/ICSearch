@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/homepage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700,1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -14,9 +14,9 @@
         </div>
         <nav>
             <a href="#">HOME</a>
-            <a href="#">FLOORS</a>
-            <a href="#">FACULTY</a>
-            <a href="#">ABOUT</a>
+                <a href="pages/floors.html">FLOORS</a>
+                <a href="#">FACULTY</a>
+                <a href="pages/about.html">ABOUT</a>
         </nav>
     </header>
 
@@ -31,7 +31,18 @@
             </div>
 
             <form id="search-form" onsubmit="handleSearch(event)">
-                <input type="text" class="search-bar" id="search-bar" placeholder="Enter a room...">
+                <input type="text" class="search-bar" id="search-bar" placeholder="Enter a room..." list="room-list">
+                <datalist id="room-list">
+                    <option value="ICS MH"></option>
+                    <option value="ICS PC2"></option>
+                    <option value="ICS PC9"></option>
+                    <option value="ICS LH4"></option>
+                </datalist>
+
+                <datalist id="faculty-list"></datalist>
+                    <option value="Juan Miguel J. Bawagan"></option>
+                    <option value="Perico Dan B. Dionisio"></option>
+                </datalist>
                 
                 <div class="submit-button-container">
                     <button type="submit" class="submit-button">Search Now</button>

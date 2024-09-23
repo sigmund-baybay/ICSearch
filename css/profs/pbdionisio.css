@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif; 
+    background: url('../../src/img/pisay1.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+/* HEADER */
+
+.logo-img {
+    width: 180px;
+    height: auto;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 10px;
+    font-size: 24px;
+}
+
+header nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #700000; 
+    transition: color 0.4s ease, text-decoration 0.4s ease; 
+}
+
+header nav a:hover {
+    color: #d32f2f; 
+    text-decoration: underline;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 180px;
+}
+
+header nav {
+    margin-left: auto;
+    margin-right: 180px;
+}
+
+/* SEARCH BAR */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    margin-left: 180px; 
+}
+
+.search-bar input[type="text"] {
+    padding: 10px 10px 10px 30px;
+    height: 60px;
+    width: 25%;
+    border-radius: 60px;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #700000;
+    font-family: 'Lato', sans-serif;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #700000;
+    opacity: 1; 
+}
+
+.search-bar input[type="text"]:focus {
+    border: 1px solid #700000; 
+    outline: none; 
+}
+
+/* MAIN CONTENTS */
+
+.container {
+    margin: 20px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.floor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 65%;
+    margin-right: 30px
+}
+
+.floor-plan {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.floor-image {
+    border: 2px solid #700000; 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px;
+}
+
+.floor-plan img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* INFORMATION */
+
+.right-column {
+    width: 35%;
+    background-color: #700000;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.info h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    align-self: center;
+    text-align: center;
+    font-weight: normal;
+}
+
+.bold-title {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.pfp-image {
+    width: 150px; 
+    height: auto; 
+    border: 2px solid white; 
+
+}
+
+.main-info {
+    display: flex; 
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 30px;
+    gap: 20px;
+}   
+
+.prof-info {
+    padding-left: 50px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.prof-info p {
+    margin-top: 10px;
+    text-indent: 10px; 
+}
+
+.info .schedule h3 {
+    color: #700000;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: white;
+    display: inline-block;
+}
+
+.info .schedule img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 2px solid white; 
+}
+
+/* IMAGES BOTTOM SECTION */
+
+.bottom-section {
+    margin-top: 10px;
+}
+
+.bottom-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+    color: #700000; 
+}
+
+.bottom-image {
+    width: 50%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bottom-image:hover {
+    transform: scale(1.01); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* FOOTER */
+
+footer {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+footer .logo {
+    margin-right: 50px;
+}
+
+footer p {
+    text-align: right;
+    margin: 0;
+}
+
+.contact-title {
+    color: #700000;
+    font-weight: bold;
+}
+
+.contact-info {
+    color: black;
+    margin-top: 8px;
+    display: block;
+}
