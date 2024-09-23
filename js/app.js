@@ -20,17 +20,18 @@ function setSearchType(type) {
 function handleSearch(event) {
     event.preventDefault(); 
 
-    const searchValue = document.getElementById('search-bar').value;
+    // Get the search value, trim whitespace, and remove spaces
+    const searchValue = document.getElementById('search-bar').value.trim().replace(/\s+/g, "").toLowerCase();
 
-    if (searchValue.trim() === '') {
+    if (searchValue === '') {
         alert('Please add an input.');
         return;
     }
 
     if (currentSearchType === 'Room') {
-        window.location.href = "pages/rooms/"+ encodeURIComponent(searchValue);
+        window.location.href = `pages/rooms/${searchValue}.html`;
     } else if (currentSearchType === 'Faculty') {
-
-        window.location.href = "pages/profs/"+ encodeURIComponent(searchValue);
+        window.location.href = `pages/profs/${searchValue}.html`;
     }
 }
+
