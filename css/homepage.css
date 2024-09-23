@@ -1,23 +1,74 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../src/img/PHYSCI.png");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.search-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+
+.search-container h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+}
+
+.search-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.search-button {
+  flex: 1;
+  padding: 15px;
+  color: white;
+  border: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.search-button.active {
+  background-color: #8b0000;
+}
+
+
+.search-bar {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: maroon;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
