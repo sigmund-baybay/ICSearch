@@ -1,9 +1,27 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: 'Lato', sans-serif;
+    /* background: url('../src/img/pisay1.jpg') no-repeat center center; */
+    /* background-size: cover; */
+    /* min-height: 100vh; */
+}
+
+/* body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+} */
+
 
 /* HEADER */
 
@@ -193,8 +211,8 @@ footer p {
     padding: 20px 30px;
     border-radius: 50%;
     /* Creates a circle */
-    width: 170px;
-    height: 150px;
+    width: 220px;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -272,7 +290,11 @@ footer p {
     font-size: 25px;
     color: #712022;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+}
+
+.developer p {
+    margin-top: 25px;
 }
 
 .developer-img {
