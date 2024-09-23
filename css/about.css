@@ -1,32 +1,313 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>ICSearch</title>
-    <link rel="stylesheet" type="text/css" href="css/homepage.css">
-    <script src="js/app.js"></script>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-</head>
-<body>
-    <div class="center">
-        <div class="search-container">
-            <div class="search-button-container">
-                <span>Search Filter</span>
-                <div class = "search-button">
-                    <button type="button" class="search-button active" id="room-button" onclick="setSearchType('Room')">Room</button>
-                    <button type="button" class="search-button" id="faculty-button" onclick="setSearchType('Faculty')">Faculty</button>
+body {
+    font-family: 'Lato', sans-serif;
+    /* background: url('../src/img/pisay1.jpg') no-repeat center center; */
+    /* background-size: cover; */
+    /* min-height: 100vh; */
+}
 
-                </div>
-            </div>
+/* body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+} */
 
-            <form id="search-form" onsubmit="handleSearch(event)">
-                <input type="text" class="search-bar" id="search-bar" placeholder="Enter a room...">
-                
-                <div class="submit-button-container">
-                    <button type="submit" class="submit-button">Search Now</button>
-                </div>
-                
-            </form>
-    </div>
-    <script src="js/app.js"></script>
-</body>
-</html>
+
+/* HEADER */
+
+.logo-img {
+    width: 180px;
+    height: auto;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 10px;
+    font-size: 24px;
+}
+
+header nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #700000;
+    transition: color 0.4s ease, text-decoration 0.4s ease;
+}
+
+header nav a:hover {
+    color: #d32f2f;
+    text-decoration: underline;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 180px;
+}
+
+header nav {
+    margin-left: auto;
+    margin-right: 180px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+footer .logo {
+    margin-right: 50px;
+}
+
+footer p {
+    text-align: right;
+    margin: 0;
+}
+
+.contact-title {
+    color: #700000;
+    font-weight: bold;
+}
+
+.contact-info {
+    color: black;
+    margin-top: 8px;
+    display: block;
+}
+
+
+
+
+.about-icsearch {
+    background-image: url("../src/img/about-PHYSCI.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* width: 100%; */
+    height: 50vh;
+}
+
+
+.about-icsearch h1 {
+    color: white;
+    margin: 0;
+    padding: 240px 0 0 80px;
+    font-size: 80px;
+}
+
+
+
+.description {
+    background-color: rgb(255, 255, 255);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description p {
+    margin: 0 0 40px 0;
+}
+
+.description p:first-of-type {
+    font-size: 45px;
+    color: #712022;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 500px;
+}
+
+.description p:nth-of-type(2) {
+    font-size: 30px;
+    color: gray;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 250px;
+}
+
+
+
+.container {
+    display: flex;
+    width: auto;
+}
+
+.prob-key {
+    flex: 1.3;
+}
+
+
+
+.megalh {
+    background-color: #712022;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.megalh-img {
+    margin-top: 60vh;
+    max-height: 90vh;
+    max-width: 100%;
+    object-fit: contain;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.problems {
+    background-color: #712022;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.problems h2 {
+    margin-top: 95px;
+    margin-bottom: 60px;
+    font-size: 45px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.problems ul {
+    list-style: none;
+    /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.problem-item {
+    background-color: white;
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 50%;
+    /* Creates a circle */
+    width: 220px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.features {
+    background-color: #ffffff;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.features h2 {
+    margin-top: 60px;
+    margin-bottom: 25px;
+    font-size: 45px;
+    color: #712022;
+    font-weight: bold;
+    text-align: center;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0 150px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.features-item {
+    background-color: #712022;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50px;
+    padding: 18px 0px;
+    margin: 0;
+    margin-bottom: 35px;
+
+    line-height: 1.2;
+    width: 290px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.developed {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    font-size: 55px;
+    color: #712022;
+    font-weight: bold;
+    text-align: center;
+    /* margin-left: 80px; */
+}
+
+.developers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 300px;
+}
+
+.developer {
+    text-align: center;
+    font-size: 25px;
+    color: #712022;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.developer p {
+    margin-top: 25px;
+}
+
+.developer-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.developer:nth-child(1) {
+    flex-basis: 100%;
+}
+
+.developer:nth-child(n+2) {
+    flex-basis: calc(33.33% - 40px);
+}
