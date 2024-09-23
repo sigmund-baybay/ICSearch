@@ -28,9 +28,9 @@ function handleSearch(event) {
     }
 
     if (currentSearchType === 'Room') {
-        window.location.href = 'searchValue';
+        window.location.href = "pages/rooms/"+ encodeURIComponent(searchValue);
     } else if (currentSearchType === 'Faculty') {
 
-        window.location.href = 'searchValue';
+        window.location.href = "pages/profs/"+ encodeURIComponent(searchValue);
     }
 }

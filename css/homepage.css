@@ -31,7 +31,7 @@ body {
   border-radius: 20px;
   cursor: pointer;
   font-size: 18px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .search-button span {
@@ -64,7 +64,7 @@ body {
 
 .submit-button {
   width: 33%;
-  padding: 12px;
+  padding: 15px;
   background-color: #4d0011;
   color: white;
   border: none;
