@@ -1,21 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column; 
+  font-family: 'Lato', sans-serif; 
   background-image: url("../src/img/PHYSCI.png");
   background-size: cover;
 }
 
-.center {
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: -1;
+}
+
+/* HEADER */
+
+.logo-img {
+  width: 180px;
+  height: auto;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 10px;
+  font-size: 24px;
+}
+
+header nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #700000; 
+  transition: color 0.4s ease, text-decoration 0.4s ease; 
+}
+
+header nav a:hover {
+  color: #d32f2f; 
+  text-decoration: underline;
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 180px;
+}
+
+header nav {
+  margin-left: auto;
+  margin-right: 180px;
+}
+
+/* MAIN */
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
 }
 
 .search-container {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   padding: 40px;
-  width: 400px;
+  width: 50%;
 }
 
 .search-button-container {
@@ -24,18 +86,19 @@ body {
   margin-bottom: 20px;
 }
 
+.search-button-container span {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
 .search-button {
   padding: 15px;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;  
   cursor: pointer;
   font-size: 18px;
   margin-right: 5px;
-}
-
-.search-button span {
-  text-decoration: dashed;
 }
 
 .search-button button {
@@ -55,6 +118,13 @@ body {
   border-radius: 20px;
   font-size: 18px;
   box-sizing: border-box;
+  color: white;
+}
+
+.search-bar::placeholder{
+  color: white;
+  opacity: .5;
+
 }
 
 .submit-button-container {
@@ -68,8 +138,37 @@ body {
   background-color: #4d0011;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 30px;
   cursor: pointer;
-  font-size: 18px;
-  
+  font-size: 18px;  
+}
+
+/* FOOTER */
+
+footer {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+}
+
+footer .logo {
+  margin-right: 50px;
+}
+
+footer p {
+  text-align: right;
+  margin: 0;
+}
+
+.contact-title {
+  color: #700000;
+  font-weight: bold;
+}
+
+.contact-info {
+  color: black;
+  margin-top: 8px;
+  display: block;
 }
