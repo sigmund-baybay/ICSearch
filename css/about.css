@@ -1,21 +1,79 @@
 body {
     font-family: Arial, sans-serif;
-    /* background-image: url("../src/img/PHYSCI.png"); */
-    /* background-size: cover; */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    /* background-color: #ffffff; */
-    /* color: #333; */
 }
 
-header,
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+/* HEADER */
+
+.logo-img {
+    width: 180px;
+    height: auto;
 }
+
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 10px;
+    font-size: 24px;
+}
+
+header nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #700000;
+    transition: color 0.4s ease, text-decoration 0.4s ease;
+}
+
+header nav a:hover {
+    color: #d32f2f;
+    text-decoration: underline;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 180px;
+}
+
+header nav {
+    margin-left: auto;
+    margin-right: 180px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+footer .logo {
+    margin-right: 50px;
+}
+
+footer p {
+    text-align: right;
+    margin: 0;
+}
+
+.contact-title {
+    color: #700000;
+    font-weight: bold;
+}
+
+.contact-info {
+    color: black;
+    margin-top: 8px;
+    display: block;
+}
+
 
 
 
@@ -27,7 +85,7 @@ footer {
     height: 50vh;
 }
 
-/* Optional: Set a specific height based on the aspect ratio */
+
 .about-icsearch h1 {
     color: white;
     margin: 0;
@@ -40,18 +98,13 @@ footer {
 .description {
     background-color: rgb(255, 255, 255);
     height: 60vh;
-    /* padding: 20px 80px; */
-    /* text-align: justify; */
-    /* Align the text properly */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Vertically center the content */
 }
 
 .description p {
     margin: 0 0 40px 0;
-    /* Add some space between paragraphs */
 }
 
 .description p:first-of-type {
@@ -110,9 +163,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Center the content horizontally */
-    /* justify-content: center; */
-    /* Vertically center the content */
 }
 
 .problems h2 {
@@ -131,7 +181,6 @@ footer {
     margin: 0;
     display: flex;
     justify-content: space-around;
-    /* Space the items evenly */
     width: 80%;
 }
 
@@ -228,20 +277,15 @@ footer {
 
 .developer-img {
     width: 300px;
-    /* Adjusted size */
     height: 300px;
-    /* Adjusted size */
     border-radius: 50%;
-    /* Circular images */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .developer:nth-child(1) {
     flex-basis: 100%;
-    /* Full width for the first developer */
 }
 
 .developer:nth-child(n+2) {
     flex-basis: calc(33.33% - 40px);
-    /* Three developers per row after the first */
 }
