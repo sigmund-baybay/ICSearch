@@ -9,16 +9,22 @@
 <body>
     <div class="center">
         <div class="search-container">
-            <div class="search-button">
-                <button type="button" class="search-button active" id="room-button" onclick="setSearchType('Room')">Room</button>
-                <button type="button" class="search-button" id="faculty-button" onclick="setSearchType('Faculty')">Faculty</button>
+            <div class="search-button-container">
+                <span>Search Filter</span>
+                <div class = "search-button">
+                    <button type="button" class="search-button active" id="room-button" onclick="setSearchType('Room')">Room</button>
+                    <button type="button" class="search-button" id="faculty-button" onclick="setSearchType('Faculty')">Faculty</button>
+
+                </div>
             </div>
 
             <form id="search-form" onsubmit="handleSearch(event)">
                 <input type="text" class="search-bar" id="search-bar" placeholder="Enter a room...">
                 
-                <!-- Search Submit Button -->
-                <button type="submit" class="submit-button">Search</button>
+                <div class="submit-button-container">
+                    <button type="submit" class="submit-button">Search</button>
+                </div>
+                
             </form>
     </div>
     <script src="js/app.js"></script>

@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-image: url("../src/img/PHYSCI.png");
   background-size: cover;
 }
@@ -18,38 +18,58 @@ body {
   width: 400px;
 }
 
+.search-button-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .search-button {
-  flex: 1;
   padding: 15px;
   color: white;
-  border: 1px;
-  border-radius: 10px;
+  border: none;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 18px;
-  text-align: center;
+  margin-right: 10px;
+}
+
+.search-button span {
+  text-decoration: dashed;
+}
+
+.search-button button {
+  background-color: #902124;
 }
 
 .search-button.active {
-  background-color: #8b0000;
+  background-color: #4d0011;
 }
-
 
 .search-bar {
   width: 100%;
   padding: 15px;
   margin-bottom: 25px;
-  border: 0px solid #ffffff;
-  border-radius: 10px;
+  background-color: #902124;
+  border: 1px solid #902124;
+  border-radius: 20px;
   font-size: 18px;
+  box-sizing: border-box;
+}
+
+.submit-button-container {
+  display: flex;
+  justify-content: flex-end; 
 }
 
 .submit-button {
-  width: 100%;
+  width: 33%;
   padding: 12px;
-  background-color: maroon;
+  background-color: #4d0011;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   font-size: 18px;
+  
 }
