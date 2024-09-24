@@ -1,15 +1,15 @@
 * {
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Lato', sans-serif;
-    /* background: url('../src/img/pisay1.jpg') no-repeat center center; */
-    /* background-size: cover; */
-    /* min-height: 100vh; */
-}
+/* body {
+    background: url('../src/img/pisay1.jpg') no-repeat center center; 
+    background-size: cover;
+    min-height: 100vh;
+} */
 
 /* body::before {
     content: '';
@@ -65,7 +65,7 @@ header nav {
 /* FOOTER */
 
 footer {
-    background-color: white;
+    background-color: #700000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,16 +82,15 @@ footer p {
 }
 
 .contact-title {
-    color: #700000;
+    color: white;
     font-weight: bold;
 }
 
 .contact-info {
-    color: black;
+    color: white;
     margin-top: 8px;
     display: block;
 }
-
 
 
 
@@ -265,8 +264,8 @@ footer p {
     justify-content: center;
     min-width: 200px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100px;
 }
-
 
 .developed {
     margin-top: 60px;

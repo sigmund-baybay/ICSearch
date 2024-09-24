@@ -1,18 +1,14 @@
-@import url('https://fonts.google.com/specimen/Inter');
-
 *{
-	font-family: 'Inter', sans-serif;
+	font-family: 'Lato', sans-serif;
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 
-
 body {
-    background: url('../src/img/pisay1.jpg') no-repeat center center fixed; 
+    background: url('../src/img/pisay1.jpg') no-repeat center center; 
     background-size: cover;
     min-height: 100vh;
-    background-position: 50% 40%;
 }
 
 body::before {
@@ -22,10 +18,9 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(30,30,30, 0.6); 
+    background: rgba(0, 0, 0, 0.5); 
     z-index: -1;
 }
-
 
 /* HEADER */
 
@@ -103,13 +98,12 @@ header nav {
 .container{
 	margin:auto;
 	border: none;
-	width: 1347px;
+	width: 90%;
 	height: auto;
-	background-color:#ffffff;
+	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 10px;
-	margin-bottom: 90px;
+	margin-bottom: 40px;
 	padding-bottom: 18px
-	
 }
 
 .center{
@@ -120,8 +114,9 @@ header nav {
 }
 
 /*title and buttons*/
+
 .top-part{
-	padding-top:5px;
+	padding-top: 5px;
 	padding-left: 12px;
 	padding-right: 12px;
 	padding-bottom: 5px;
@@ -129,13 +124,13 @@ header nav {
 	display: flex;
 	justify-content: space-evenly; 
 }
+
 #floor-text{
 	margin-top: auto;
 	margin-bottom: auto;
-	margin-left: 550px;
+	margin-left: 20px;
 	margin-right: auto;
 }
-
 
 .image-button{
     background-color: #700000;
@@ -150,11 +145,9 @@ header nav {
     font-weight: bold;
 }
 
-
 .image-button:hover {
     background-color: #d32f2f;
 }
-
 
 .floors {
 	padding-top:18px;
@@ -165,18 +158,18 @@ header nav {
     justify-content: center;
 }
 
-
 .floor-image {
-    border: 2px solid #700000; 
+    border: 3px solid #700000; 
     max-width: 100%; 
     height: auto; 
     border-radius: 10px;
+    margin-bottom: 30px;
 }
+
 .floors img {
     max-width: 100%;
     height: auto;
 }
-
 
 /* FOOTER */
 

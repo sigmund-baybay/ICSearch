@@ -96,6 +96,7 @@ header nav {
 /* MAIN CONTENTS */
 
 .container {
+    width: 80%;
     margin: 20px auto;
     padding: 30px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -113,7 +114,6 @@ header nav {
 .floor-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     width: 65%;
     margin-right: 30px
 }
@@ -163,7 +163,6 @@ header nav {
     width: 150px; 
     height: auto; 
     border: 2px solid white; 
-
 }
 
 .main-info {
