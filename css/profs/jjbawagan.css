@@ -142,16 +142,21 @@ header nav {
     width: 35%;
     background-color: #700000;
     color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.info {
     padding: 20px;
+    background-color: #700000; /* Optional: color for emphasis */
+    color: white;
     border-radius: 10px;
 }
 
 .info h2 {
     font-size: 24px;
-    margin-bottom: 30px;
-    align-self: center;
     text-align: center;
     font-weight: normal;
+    margin-bottom: 20px;
 }
 
 .bold-title {
@@ -159,29 +164,45 @@ header nav {
     font-size: 28px;
 }
 
+.main-info {
+    display: flex; 
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px 0;
+    gap: 20px; /* Space between image and text */
+}
+
 .pfp-image {
     width: 150px; 
     height: auto; 
     border: 2px solid white; 
+    margin-right: 20px;
+    border-radius: 10px;
 }
 
-.main-info {
-    display: flex; 
-    align-items: center;
-    padding: 20px;
-    padding-bottom: 30px;
-    gap: 20px;
-}   
-
 .prof-info {
-    padding-left: 50px; 
     display: flex;
     flex-direction: column;
 }
 
+.prof-info h3 {
+    margin-bottom: 10px;
+    color: white; /* White text for better readability */
+}
+
+.prof-info ul {
+    padding-left: 30px;
+}
+
 .prof-info p {
     margin-top: 10px;
-    text-indent: 10px; 
+}
+
+.prof-info .contact-info {
+    list-style: none;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    color: white;
+    padding-left: 14px;
 }
 
 .info .schedule h3 {
@@ -195,11 +216,14 @@ header nav {
     display: inline-block;
 }
 
-.info .schedule img {
-    width: 100%;
-    border-radius: 10px;
+.schedule {
     margin-top: 10px;
+}
+
+.schedule img {
+    width: 100%;
     border: 2px solid white; 
+    border-radius: 10px;
 }
 
 /* IMAGES BOTTOM SECTION */
