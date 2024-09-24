@@ -73,7 +73,8 @@ footer {
 }
 
 footer .logo {
-    margin-right: 50px;
+    margin-right: 160px;
+    margin-left: 20px;
 }
 
 footer p {
@@ -91,8 +92,6 @@ footer p {
     margin-top: 8px;
     display: block;
 }
-
-
 
 .about-icsearch {
     background-image: url("../src/img/about-PHYSCI.png");

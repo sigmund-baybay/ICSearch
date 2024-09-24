@@ -250,30 +250,33 @@ header nav {
 
 /* FOOTER */
 
+/* FOOTER */
+
 footer {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
 }
 
 footer .logo {
-    margin-right: 50px;
+  margin-right: 160px;
+  margin-left: 20px;
 }
 
 footer p {
-    text-align: right;
-    margin: 0;
+  text-align: right;
+  margin: 0;
 }
 
 .contact-title {
-    color: #700000;
-    font-weight: bold;
+  color: #700000;
+  font-weight: bold;
 }
 
 .contact-info {
-    color: black;
-    margin-top: 8px;
-    display: block;
+  color: black;
+  margin-top: 8px;
+  display: block;
 }
