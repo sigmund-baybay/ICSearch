@@ -18,7 +18,6 @@ function back() {
   }
 }
 
-
 function forward() {
   var image = document.getElementById("floorImage");
    var floorText = document.getElementById("floor-text");

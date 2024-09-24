@@ -29,7 +29,6 @@ function setSearchType(type) {
     document.getElementById('faculty-button').classList.toggle('active', type === 'Faculty');
 }
 
-
 function handleSearch(event) {
     event.preventDefault(); 
 
