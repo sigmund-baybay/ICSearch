@@ -117,6 +117,16 @@ header nav {
     width: 65%;
     margin-right: 30px
 }
+.floor-count {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.floor-count h3 {
+    font-size: 30px;
+    padding: 10px 0px;
+    color: black; 
+}
 
 .floor-plan {
     width: 100%;
