@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url('../src/img/pisay1.jpg') no-repeat center center; 
+    background: url('../src/img/pisay1.jpg') no-repeat center center fixed; 
     background-size: cover;
     min-height: 100vh;
 }
@@ -93,14 +93,13 @@ header nav {
     outline: none; 
 }
 
-
 /*whitebox*/
 .container{
 	margin:auto;
 	border: none;
 	width: 90%;
 	height: auto;
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(255, 255, 255, 0.8);
 	border-radius: 10px;
 	margin-bottom: 40px;
 	padding-bottom: 18px

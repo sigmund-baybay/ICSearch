@@ -1,11 +1,11 @@
 * {
+    font-family: 'Lato', sans-serif; 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Lato', sans-serif; 
     background: url('../../src/img/pisay1.jpg') no-repeat center center;
     background-size: cover;
     min-height: 100vh;
