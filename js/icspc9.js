@@ -5,23 +5,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateImageAndButtons() {
         document.getElementById('floorImage').src = images[currentIndex];
+       
         document.querySelector('.floor-count h3').textContent = titles[currentIndex];
+
+        document.getElementById('prevButton').disabled = (currentIndex === 0);
+        document.getElementById('nextButton').disabled = (currentIndex === images.length - 1);
     }
 
     document.getElementById('prevButton').addEventListener('click', () => {
-        if (currentIndex > 0) 
+        if (currentIndex > 0) {
             currentIndex--;
-        else 
-            currentIndex = images.length-1;
-        updateImageAndButtons();
+            updateImageAndButtons();
+        }
     });
 
     document.getElementById('nextButton').addEventListener('click', () => {
-        if (currentIndex < images.length - 1) 
+        if (currentIndex < images.length - 1) {
             currentIndex++;
-        else
-            currentIndex = 0;
-        updateImageAndButtons();
+            updateImageAndButtons();
+        }
     });
 
     updateImageAndButtons();
