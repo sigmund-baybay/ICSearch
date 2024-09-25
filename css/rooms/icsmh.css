@@ -231,16 +231,24 @@ header nav {
 }
 
 .bottom-section h3 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 10px;
     padding: 10px 0px;
     color: #700000; 
 }
 
+.bottom-section-images {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .bottom-image {
-    width: 50%;
+    width: 49%; 
+    object-fit: cover; 
+    height: 50%; 
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bottom-image:hover {
